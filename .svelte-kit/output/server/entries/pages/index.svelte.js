@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as each, b as add_attribute, e as escape } from "../../_app/immutable/chunks/index-9a1255b9.js";
+import { c as create_ssr_component, a as each, e as escape, b as add_attribute } from "../../_app/immutable/chunks/index-9a1255b9.js";
 import axios from "axios";
 import countryCodes from "../endpoints/data.js";
 const index_svelte_svelte_type_style_lang = "";
@@ -22,7 +22,6 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let comparisonCountry = "";
   let columns = ["Holiday Date", "Holiday Name"];
   let showHolidays = true;
-  let showTime = true;
   let showPopulation = true;
   $$result.css.add(css);
   country = Object.keys(countries).find((key) => countries[key] === countryName);
@@ -66,12 +65,8 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}<option value="${"all"}">All Countries</option></select>
 
 
-		${`<select class="${"menu svelte-a0xq77"}" name="${"menu"}" id="${"menu"}"><option disabled selected value="${""}">Select a country.</option>${each(Object.entries(countries), ([code, name]) => {
-    return `<option${add_attribute("value", name, 0)}>${escape(name)}</option>`;
-  })}<option value="${"all"}">All Countries</option></select>`}
-		${`<input type="${"checkbox"}"${add_attribute("checked", showTime, 1)}> Time
-			<input type="${"checkbox"}"${add_attribute("checked", showPopulation, 1)}> Population
-			<input type="${"checkbox"}"${add_attribute("checked", showHolidays, 1)}> Holidays`}
+		${``}
+		${``}
 		${time ? `<button>Compare
 		</button>` : ``}
 

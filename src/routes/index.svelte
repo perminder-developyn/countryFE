@@ -21,7 +21,7 @@
 	let showHolidays = true;
 	let showTime = true;
 	let showPopulation = true;
-	let comparison = true;
+	let comparison = false;
 	
 	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data)
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${country}`).then(x => population = x.data)
