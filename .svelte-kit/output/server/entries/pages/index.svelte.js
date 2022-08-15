@@ -26,7 +26,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   country = Object.keys(countries).find((key) => countries[key] === countryName);
   {
-    axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then((x) => time = x.data);
+    axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then((x) => time = x.data.slice(11, 19));
   }
   {
     axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${country}`).then((x) => population = x.data);
@@ -36,7 +36,7 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   }
   comparisonCountry = Object.keys(countries).find((key) => countries[key] === comparisonCountryName);
   {
-    axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then((x) => comparisonTime = x.data);
+    axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then((x) => comparisonTime = x.data.slice(11, 19));
   }
   {
     axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then((x) => comparisonPopulation = x.data);

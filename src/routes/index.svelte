@@ -23,10 +23,10 @@
 	let showPopulation = true;
 	let comparison = false;
 	
-	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data)
+	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data.slice(11, 19))
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${country}`).then(x => population = x.data)
 	$: axios.get(`https://phibbr4oo4.execute-api.us-east-1.amazonaws.com/${country}`).then(x => holidays = (x.data))
-	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonTime = x.data)
+	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonTime = x.data.slice(11, 19))
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonPopulation = x.data)
 	$: axios.get(`https://phibbr4oo4.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonHolidays = (x.data))
 
