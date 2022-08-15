@@ -69,9 +69,9 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		${`<select class="${"menu svelte-a0xq77"}" name="${"menu"}" id="${"menu"}"><option disabled selected value="${""}">Select a country.</option>${each(Object.entries(countries), ([code, name]) => {
     return `<option${add_attribute("value", name, 0)}>${escape(name)}</option>`;
   })}<option value="${"all"}">All Countries</option></select>`}
-		<input type="${"checkbox"}"${add_attribute("checked", showTime, 1)}> Time
-		<input type="${"checkbox"}"${add_attribute("checked", showPopulation, 1)}> Population
-		<input type="${"checkbox"}"${add_attribute("checked", showHolidays, 1)}> Holidays
+		${`<input type="${"checkbox"}"${add_attribute("checked", showTime, 1)}> Time
+			<input type="${"checkbox"}"${add_attribute("checked", showPopulation, 1)}> Population
+			<input type="${"checkbox"}"${add_attribute("checked", showHolidays, 1)}> Holidays`}
 		${time ? `<button>Compare
 		</button>` : ``}
 
