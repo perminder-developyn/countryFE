@@ -23,10 +23,10 @@
 	let showPopulation = false;
 	let comparison = false;
 	
-	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data.slice(11,19))
+	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data)
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${country}`).then(x => population = x.data)
 	$: axios.get(`https://phibbr4oo4.execute-api.us-east-1.amazonaws.com/${country}`).then(x => holidays = (x.data))
-	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonTime = x.data.slice(11,19))
+	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonTime = x.data)
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonPopulation = x.data)
 	$: axios.get(`https://phibbr4oo4.execute-api.us-east-1.amazonaws.com/${comparisonCountry}`).then(x => comparisonHolidays = (x.data))
 
@@ -94,93 +94,93 @@
 
 <div>
 	{#if country}
-	<div class="first">
-	<h1>{countryName}</h1>
-	<table>
-		{#if !showTime && time}
-		<th>Time</th>
-		<tr>{time}</tr>
-		{/if}
-		{#if population && !showPopulation}
-		<th>Population</th>
-		<tr>{population}</tr>
-		{/if}
-		{#if formattedHolidays.length && !showHolidays}
-		<tr>
-			{#each columns as column}
-				<th>{column}</th>
-			{/each}
-		</tr>
-		{#each formattedHolidays as row}
-			<tr>
-				{#each row as cell}
-				<td contenteditable="true" bind:innerHTML={cell} />
+		<div class="first">
+		<h1>{countryName}</h1>
+		<table>
+			{#if !showTime && time}
+				<th>Time</th>
+				<tr>{time}</tr>
+			{/if}
+			{#if population && !showPopulation}
+				<th>Population</th>
+				<tr>{population}</tr>
+			{/if}
+			{#if formattedHolidays.length && !showHolidays}
+				<tr>
+					{#each columns as column}
+						<th>{column}</th>
+					{/each}
+				</tr>
+				{#each formattedHolidays as row}
+					<tr>
+						{#each row as cell}
+							<td contenteditable="true" bind:innerHTML={cell} />
+						{/each}
+					</tr>
 				{/each}
-			</tr>
-		{/each}
-		{/if}
-		</table>
-	</div>
+			{/if}
+			</table>
+		</div>
 	{/if}
 
 	{#if comparisonCountry}
-	<div class="second">
-	<h1>{comparisonCountryName}</h1>
-	<table>
-		{#if !showTime && comparisonTime}
-		<th>Time</th>
-		<tr>{comparisonTime}</tr>
-		{/if}
-		{#if comparisonPopulation && !showPopulation}
-		<th>Population</th>
-		<tr>{comparisonPopulation}</tr>
-		{/if}
-		{#if formattedComparisonHolidays.length && !showHolidays}
-		<tr>
-			{#each columns as column}
-				<th>{column}</th>
-			{/each}
-		</tr>
-		{#each formattedComparisonHolidays as row}
-			<tr>
-				{#each row as cell}
-				<td contenteditable="true" bind:innerHTML={cell} />
-				{/each}
-			</tr>
-		{/each}
-		{/if}
-		</table>
-	</div>
+		<div class="second">
+			<h1>{comparisonCountryName}</h1>
+			<table>
+				{#if !showTime && comparisonTime}
+					<th>Time</th>
+					<tr>{comparisonTime}</tr>
+				{/if}
+				{#if comparisonPopulation && !showPopulation}
+					<th>Population</th>
+					<tr>{comparisonPopulation}</tr>
+				{/if}
+				{#if formattedComparisonHolidays.length && !showHolidays}
+					<tr>
+						{#each columns as column}
+							<th>{column}</th>
+						{/each}
+					</tr>
+					{#each formattedComparisonHolidays as row}
+						<tr>
+							{#each row as cell}
+								<td contenteditable="true" bind:innerHTML={cell} />
+							{/each}
+						</tr>
+					{/each}
+				{/if}
+			</table>
+		</div>
 	{/if}
 </div>
 </main>
 
 <style>
+main {
+	text-align: center;
+	padding: 1em;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #ff3e00;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 100;
+}
+.first, .second{
+	padding: 1rem;
+	display: inline-block;
+	border: 1px solid grey;
+	text-align: center;
+}
+.menu {
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 640px) {
 	main {
-		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
+		max-width: none;
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 2rem;
-		font-weight: 100;
-	}
-	.first, .second{
-		padding: 1rem;
-		display: inline-block;
-		border: 1px solid grey;
-		text-align: center;
-	}
-	.menu{
-		margin-bottom: 5rem;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+}
 </style>
