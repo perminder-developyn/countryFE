@@ -6,7 +6,7 @@ export const SHELL = "/bin/bash";
 export const npm_command = "run-script";
 
 /** @type {import('$env/static/private').SESSION_MANAGER} */
-export const SESSION_MANAGER = "local/unix:@/tmp/.ICE-unix/2071,unix/unix:/tmp/.ICE-unix/2071";
+export const SESSION_MANAGER = "local/unix:@/tmp/.ICE-unix/1996,unix/unix:/tmp/.ICE-unix/1996";
 
 /** @type {import('$env/static/private').npm_config_userconfig} */
 export const npm_config_userconfig = "/home/p/.npmrc";
@@ -78,13 +78,13 @@ export const XDG_SESSION_TYPE = "wayland";
 export const npm_config_init_module = "/home/p/.npm-init.js";
 
 /** @type {import('$env/static/private').SYSTEMD_EXEC_PID} */
-export const SYSTEMD_EXEC_PID = "2123";
+export const SYSTEMD_EXEC_PID = "2050";
 
 /** @type {import('$env/static/private')._} */
 export const _ = "/home/p/Developyn/countryFE/node_modules/.bin/vite";
 
 /** @type {import('$env/static/private').XAUTHORITY} */
-export const XAUTHORITY = "/run/user/1000/.mutter-Xwaylandauth.F4KYQ1";
+export const XAUTHORITY = "/run/user/1000/.mutter-Xwaylandauth.2TZPQ1";
 
 /** @type {import('$env/static/private').VSCODE_GIT_ASKPASS_NODE} */
 export const VSCODE_GIT_ASKPASS_NODE = "/usr/share/code/code";
@@ -120,7 +120,7 @@ export const WAYLAND_DISPLAY = "wayland-0";
 export const GIT_ASKPASS = "/usr/share/code/resources/app/extensions/git/dist/askpass.sh";
 
 /** @type {import('$env/static/private').GNOME_TERMINAL_SCREEN} */
-export const GNOME_TERMINAL_SCREEN = "/org/gnome/Terminal/screen/7a5e4f95_36e1_4c69_9713_c24798b8f1ac";
+export const GNOME_TERMINAL_SCREEN = "/org/gnome/Terminal/screen/b5f19a0a_893f_4336_9aa2_3ba38c9b04ab";
 
 /** @type {import('$env/static/private').INIT_CWD} */
 export const INIT_CWD = "/home/p/Developyn/countryFE";
@@ -129,7 +129,7 @@ export const INIT_CWD = "/home/p/Developyn/countryFE";
 export const CHROME_DESKTOP = "code-url-handler.desktop";
 
 /** @type {import('$env/static/private').npm_lifecycle_script} */
-export const npm_lifecycle_script = "vite dev";
+export const npm_lifecycle_script = "vite build";
 
 /** @type {import('$env/static/private').VSCODE_GIT_ASKPASS_EXTRA_ARGS} */
 export const VSCODE_GIT_ASKPASS_EXTRA_ARGS = "--ms-enable-electron-run-as-node";
@@ -159,13 +159,13 @@ export const USER = "p";
 export const VSCODE_GIT_IPC_HANDLE = "/run/user/1000/vscode-git-1411a318c8.sock";
 
 /** @type {import('$env/static/private').GNOME_TERMINAL_SERVICE} */
-export const GNOME_TERMINAL_SERVICE = ":1.127";
+export const GNOME_TERMINAL_SERVICE = ":1.93";
 
 /** @type {import('$env/static/private').DISPLAY} */
 export const DISPLAY = ":0";
 
 /** @type {import('$env/static/private').npm_lifecycle_event} */
-export const npm_lifecycle_event = "dev";
+export const npm_lifecycle_event = "build";
 
 /** @type {import('$env/static/private').SHLVL} */
 export const SHLVL = "4";
@@ -238,3 +238,6 @@ export const OLDPWD = "/home/p/Developyn";
 
 /** @type {import('$env/static/private').TERM_PROGRAM} */
 export const TERM_PROGRAM = "vscode";
+
+/** @type {import('$env/static/private').NODE_ENV} */
+export const NODE_ENV = "production";

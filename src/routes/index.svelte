@@ -18,10 +18,10 @@
 	let country = '';
 	let comparisonCountry = '';
 	let columns = ["Holiday Date", "Holiday Name"]; 
-	let showHolidays = false;
-	let showTime = false;
-	let showPopulation = false;
-	let comparison = false;
+	let showHolidays = true;
+	let showTime = true;
+	let showPopulation = true;
+	let comparison = true;
 	
 	$: axios.get(`https://drzg4vt217.execute-api.us-east-1.amazonaws.com/${country}`).then(x => time = x.data)
 	$: axios.get(`https://3u1yozhscl.execute-api.us-east-1.amazonaws.com/${country}`).then(x => population = x.data)
@@ -97,15 +97,15 @@
 		<div class="first">
 		<h1>{countryName}</h1>
 		<table>
-			{#if !showTime && time}
+			{#if showTime && time}
 				<th>Time</th>
 				<tr>{time}</tr>
 			{/if}
-			{#if population && !showPopulation}
+			{#if population && showPopulation}
 				<th>Population</th>
 				<tr>{population}</tr>
 			{/if}
-			{#if formattedHolidays.length && !showHolidays}
+			{#if formattedHolidays.length && showHolidays}
 				<tr>
 					{#each columns as column}
 						<th>{column}</th>
@@ -127,15 +127,15 @@
 		<div class="second">
 			<h1>{comparisonCountryName}</h1>
 			<table>
-				{#if !showTime && comparisonTime}
+				{#if showTime && comparisonTime}
 					<th>Time</th>
 					<tr>{comparisonTime}</tr>
 				{/if}
-				{#if comparisonPopulation && !showPopulation}
+				{#if comparisonPopulation && showPopulation}
 					<th>Population</th>
 					<tr>{comparisonPopulation}</tr>
 				{/if}
-				{#if formattedComparisonHolidays.length && !showHolidays}
+				{#if formattedComparisonHolidays.length && showHolidays}
 					<tr>
 						{#each columns as column}
 							<th>{column}</th>
