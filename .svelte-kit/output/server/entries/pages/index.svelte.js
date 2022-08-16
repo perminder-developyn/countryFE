@@ -65,39 +65,39 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}<option value="${"all"}">All Countries</option></select>
 
 
-		${``}
-		${``}
+	${``}
+	<div>${``}
 		${time ? `<button>Compare
-		</button>` : ``}
+			</button>` : ``}</div>
 
-<div>${country ? `<div class="${"first svelte-a0xq77"}"><h1 class="${"svelte-a0xq77"}">${escape(countryName)}</h1>
-		<table>${time ? `<th>Time</th>
-				<tr>${escape(time)}</tr>` : ``}
-			${population && showPopulation ? `<th>Population</th>
-				<tr>${escape(population)}</tr>` : ``}
-			${formattedHolidays.length && showHolidays ? `<tr>${each(columns, (column) => {
+	<div>${country ? `<div class="${"first svelte-a0xq77"}"><h1 class="${"svelte-a0xq77"}">${escape(countryName)}</h1>
+			<table>${time ? `<th>Time</th>
+					<tr>${escape(time)}</tr>` : ``}
+				${population && showPopulation ? `<th>Population</th>
+					<tr>${escape(population)}</tr>` : ``}
+				${formattedHolidays.length && showHolidays ? `<tr>${each(columns, (column) => {
     return `<th>${escape(column)}</th>`;
   })}</tr>
-				${each(formattedHolidays, (row) => {
-    return `<tr>${each(row, (cell) => {
-      return `<td contenteditable="${"true"}">${(($$value) => $$value === void 0 ? `` : $$value)(cell)}</td>`;
-    })}
-					</tr>`;
-  })}` : ``}</table></div>` : ``}
-
-	${comparisonCountry ? `<div class="${"second svelte-a0xq77"}"><h1 class="${"svelte-a0xq77"}">${escape(comparisonCountryName)}</h1>
-			<table>${comparisonTime ? `<th>Time</th>
-					<tr>${escape(comparisonTime)}</tr>` : ``}
-				${comparisonPopulation && showPopulation ? `<th>Population</th>
-					<tr>${escape(comparisonPopulation)}</tr>` : ``}
-				${formattedComparisonHolidays.length && showHolidays ? `<tr>${each(columns, (column) => {
-    return `<th>${escape(column)}</th>`;
-  })}</tr>
-					${each(formattedComparisonHolidays, (row) => {
+					${each(formattedHolidays, (row) => {
     return `<tr>${each(row, (cell) => {
       return `<td contenteditable="${"true"}">${(($$value) => $$value === void 0 ? `` : $$value)(cell)}</td>`;
     })}
 						</tr>`;
+  })}` : ``}</table></div>` : ``}
+
+		${comparisonCountry ? `<div class="${"second svelte-a0xq77"}"><h1 class="${"svelte-a0xq77"}">${escape(comparisonCountryName)}</h1>
+				<table>${comparisonTime ? `<th>Time</th>
+						<tr>${escape(comparisonTime)}</tr>` : ``}
+					${comparisonPopulation && showPopulation ? `<th>Population</th>
+						<tr>${escape(comparisonPopulation)}</tr>` : ``}
+					${formattedComparisonHolidays.length && showHolidays ? `<tr>${each(columns, (column) => {
+    return `<th>${escape(column)}</th>`;
+  })}</tr>
+						${each(formattedComparisonHolidays, (row) => {
+    return `<tr>${each(row, (cell) => {
+      return `<td contenteditable="${"true"}">${(($$value) => $$value === void 0 ? `` : $$value)(cell)}</td>`;
+    })}
+							</tr>`;
   })}` : ``}</table></div>` : ``}</div>
 </main>`;
 });
