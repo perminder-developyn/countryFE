@@ -84,9 +84,9 @@
 
 		{/if}
 		{#if comparison}
-			<input type=checkbox bind:checked={showTime}> Time
-			<input type=checkbox bind:checked={showPopulation}> Population
-			<input type=checkbox bind:checked={showHolidays}> Holidays
+		<label>	<input type=checkbox bind:checked={showTime}> Time </label>
+		<label>	<input type=checkbox bind:checked={showPopulation}> Population </label>
+		<label> <input type=checkbox bind:checked={showHolidays}> Holidays </label>
 		{/if}
 		{#if time}
 		<button on:click={compare}>
