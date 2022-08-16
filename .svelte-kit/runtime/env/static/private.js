@@ -6,7 +6,7 @@ export const SHELL = "/bin/bash";
 export const npm_command = "run-script";
 
 /** @type {import('$env/static/private').SESSION_MANAGER} */
-export const SESSION_MANAGER = "local/unix:@/tmp/.ICE-unix/1996,unix/unix:/tmp/.ICE-unix/1996";
+export const SESSION_MANAGER = "local/unix:@/tmp/.ICE-unix/1842,unix/unix:/tmp/.ICE-unix/1842";
 
 /** @type {import('$env/static/private').npm_config_userconfig} */
 export const npm_config_userconfig = "/home/p/.npmrc";
@@ -25,9 +25,6 @@ export const XDG_MENU_PREFIX = "gnome-";
 
 /** @type {import('$env/static/private').TERM_PROGRAM_VERSION} */
 export const TERM_PROGRAM_VERSION = "1.67.2";
-
-/** @type {import('$env/static/private').APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL} */
-export const APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = "true";
 
 /** @type {import('$env/static/private').HOSTNAME} */
 export const HOSTNAME = "fedora";
@@ -78,16 +75,19 @@ export const XDG_SESSION_TYPE = "wayland";
 export const npm_config_init_module = "/home/p/.npm-init.js";
 
 /** @type {import('$env/static/private').SYSTEMD_EXEC_PID} */
-export const SYSTEMD_EXEC_PID = "2050";
+export const SYSTEMD_EXEC_PID = "1902";
 
 /** @type {import('$env/static/private')._} */
 export const _ = "/home/p/Developyn/countryFE/node_modules/.bin/vite";
 
 /** @type {import('$env/static/private').XAUTHORITY} */
-export const XAUTHORITY = "/run/user/1000/.mutter-Xwaylandauth.2TZPQ1";
+export const XAUTHORITY = "/run/user/1000/.mutter-Xwaylandauth.4CNUQ1";
 
 /** @type {import('$env/static/private').VSCODE_GIT_ASKPASS_NODE} */
 export const VSCODE_GIT_ASKPASS_NODE = "/usr/share/code/code";
+
+/** @type {import('$env/static/private').GJS_DEBUG_TOPICS} */
+export const GJS_DEBUG_TOPICS = "JS ERROR;JS LOG";
 
 /** @type {import('$env/static/private').GDM_LANG} */
 export const GDM_LANG = "en_GB.UTF-8";
@@ -110,17 +110,17 @@ export const XDG_CURRENT_DESKTOP = "GNOME";
 /** @type {import('$env/static/private').npm_package_version} */
 export const npm_package_version = "0.0.1";
 
-/** @type {import('$env/static/private').VTE_VERSION} */
-export const VTE_VERSION = "6800";
-
 /** @type {import('$env/static/private').WAYLAND_DISPLAY} */
 export const WAYLAND_DISPLAY = "wayland-0";
 
 /** @type {import('$env/static/private').GIT_ASKPASS} */
 export const GIT_ASKPASS = "/usr/share/code/resources/app/extensions/git/dist/askpass.sh";
 
-/** @type {import('$env/static/private').GNOME_TERMINAL_SCREEN} */
-export const GNOME_TERMINAL_SCREEN = "/org/gnome/Terminal/screen/b5f19a0a_893f_4336_9aa2_3ba38c9b04ab";
+/** @type {import('$env/static/private').INVOCATION_ID} */
+export const INVOCATION_ID = "11211df41bb742b6845b7abd0d068d81";
+
+/** @type {import('$env/static/private').MANAGERPID} */
+export const MANAGERPID = "1728";
 
 /** @type {import('$env/static/private').INIT_CWD} */
 export const INIT_CWD = "/home/p/Developyn/countryFE";
@@ -130,6 +130,9 @@ export const CHROME_DESKTOP = "code-url-handler.desktop";
 
 /** @type {import('$env/static/private').npm_lifecycle_script} */
 export const npm_lifecycle_script = "vite build";
+
+/** @type {import('$env/static/private').GJS_DEBUG_OUTPUT} */
+export const GJS_DEBUG_OUTPUT = "stderr";
 
 /** @type {import('$env/static/private').VSCODE_GIT_ASKPASS_EXTRA_ARGS} */
 export const VSCODE_GIT_ASKPASS_EXTRA_ARGS = "--ms-enable-electron-run-as-node";
@@ -158,9 +161,6 @@ export const USER = "p";
 /** @type {import('$env/static/private').VSCODE_GIT_IPC_HANDLE} */
 export const VSCODE_GIT_IPC_HANDLE = "/run/user/1000/vscode-git-1411a318c8.sock";
 
-/** @type {import('$env/static/private').GNOME_TERMINAL_SERVICE} */
-export const GNOME_TERMINAL_SERVICE = ":1.93";
-
 /** @type {import('$env/static/private').DISPLAY} */
 export const DISPLAY = ":0";
 
@@ -168,7 +168,7 @@ export const DISPLAY = ":0";
 export const npm_lifecycle_event = "build";
 
 /** @type {import('$env/static/private').SHLVL} */
-export const SHLVL = "4";
+export const SHLVL = "2";
 
 /** @type {import('$env/static/private').QT_IM_MODULE} */
 export const QT_IM_MODULE = "ibus";
@@ -193,6 +193,9 @@ export const which_declare = "declare -f";
 
 /** @type {import('$env/static/private').VSCODE_GIT_ASKPASS_MAIN} */
 export const VSCODE_GIT_ASKPASS_MAIN = "/usr/share/code/resources/app/extensions/git/dist/askpass-main.js";
+
+/** @type {import('$env/static/private').JOURNAL_STREAM} */
+export const JOURNAL_STREAM = "8:32099";
 
 /** @type {import('$env/static/private').XDG_DATA_DIRS} */
 export const XDG_DATA_DIRS = "/home/p/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/";
@@ -230,11 +233,14 @@ export const npm_config_global_prefix = "/usr/local";
 /** @type {import('$env/static/private').MAIL} */
 export const MAIL = "/var/spool/mail/p";
 
+/** @type {import('$env/static/private').GIO_LAUNCHED_DESKTOP_FILE_PID} */
+export const GIO_LAUNCHED_DESKTOP_FILE_PID = "4194";
+
 /** @type {import('$env/static/private').npm_node_execpath} */
 export const npm_node_execpath = "/usr/bin/node";
 
-/** @type {import('$env/static/private').OLDPWD} */
-export const OLDPWD = "/home/p/Developyn";
+/** @type {import('$env/static/private').GIO_LAUNCHED_DESKTOP_FILE} */
+export const GIO_LAUNCHED_DESKTOP_FILE = "/usr/share/applications/code.desktop";
 
 /** @type {import('$env/static/private').TERM_PROGRAM} */
 export const TERM_PROGRAM = "vscode";
